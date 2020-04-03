@@ -9,8 +9,7 @@ Things you may want to cover:
 * Database MySQL 5.7
 
 
-
-DEV Environment Commands
+## DEV Environment Commands
 
 * RUBYOPT='-W:no-deprecated -W:no-experimental' rails server
 
