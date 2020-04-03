@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2020_04_02_193109) do
 
-  create_table "retailers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "retailers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.string "name", limit: 64, null: false
     t.string "uri_string", null: false
     t.string "status", limit: 32, default: "actv", null: false
