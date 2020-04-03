@@ -8,3 +8,12 @@ Things you may want to cover:
 
 * Database MySQL 5.7
 
+
+
+DEV Environment Commands
+
+* RUBYOPT='-W:no-deprecated -W:no-experimental' rails server
+
+* RUBYOPT='-W:no-deprecated -W:no-experimental' db:seed
+
+* RUBYOPT='-W:no-deprecated -W:no-experimental' db:migrate
