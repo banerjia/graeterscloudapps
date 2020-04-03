@@ -1,0 +1,27 @@
+<h1>Retailer Details</h1>
+
+<p id="notice"><%= notice %></p>
+
+<%- if !@retailer.is_active? -%>
+<p>
+  <strong>Status:</strong>
+  <%= Retailer::STATUS.key(@retailer.status).capitalize %> 
+</p>
+<%- end -%>
+
+<p>
+  <strong>Name:</strong>
+  <%= @retailer.name %> 
+</p>
+
+<p>
+  <strong>Uri string:</strong>
+  <%= @retailer.uri_string %>
+</p>
+
+<div>
+  <%= render 'timestamps', model: @retailer -%>
+</div>
+
+<%= link_to 'Edit', edit_manage_retailer_path(@retailer) %> |
+<%= link_to 'Back', manage_retailers_path %>

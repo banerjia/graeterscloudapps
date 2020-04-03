@@ -1,0 +1,11 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Retailers</h1>
+
+<%= render 'retailers', retailers:@retailers.select{|r| r.is_active?}, list_caption: 'Active Retailers'-%>
+
+<%= render 'retailers', retailers:@retailers.select{|r| !r.is_active?}, show_status_column: true, list_caption: 'Inactive Retailers' -%>
+
+<br>
+
+<%= link_to 'New Retailer', new_manage_retailer_path %>

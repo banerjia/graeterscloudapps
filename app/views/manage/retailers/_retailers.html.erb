@@ -1,0 +1,34 @@
+<%-
+    # Defining default values
+    show_status_column  = false         if (defined?(show_status_column)).nil?
+    list_caption        = "Retailers"   if list_caption.nil?
+-%>
+
+<table>
+    <caption><%= list_caption -%></caption>
+    <thead>
+      <tr>
+    <%- if show_status_column -%>
+        <th scope="col">Status</th>
+    <%- end -%>
+        <th>Name</th>
+        <th>Retailer URI Code</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+  
+    <tbody>
+      <%- retailers.each do |retailer| -%>
+        <tr>
+        <%- if show_status_column -%>
+            <td><%= Retailer::STATUS.key(retailer.status).to_s.capitalize -%></td>
+        <%- end -%>          
+          <td><%= retailer.name %></td>
+          <td><%= retailer.uri_string %></td>
+          <td><%= link_to 'Show', manage_retailer_path(retailer) %></td>
+          <td><%= link_to 'Edit', edit_manage_retailer_path(retailer) %></td>
+          <td><%= button_to 'Remove', manage_retailer_path(retailer), method: :delete %></td>
+        </tr>
+      <%- end -%>
+    </tbody>
+  </table>
