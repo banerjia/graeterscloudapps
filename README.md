@@ -17,3 +17,5 @@ DEV Environment Commands
 * RUBYOPT='-W:no-deprecated -W:no-experimental' db:seed
 
 * RUBYOPT='-W:no-deprecated -W:no-experimental' db:migrate
+
+* docker run --name gas -v $PWD:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123456 -d mysql:5.7
