@@ -17,4 +17,9 @@ Things you may want to cover:
 
 * RUBYOPT='-W:no-deprecated -W:no-experimental' db:migrate
 
-* docker run --name gas -v $PWD:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123456 -d mysql:5.7
+* docker run --name gas -v $PWD:/var/lib/mysql -e MYSQL_ALLOW_EMPTY_PASSWORD -p 3306:3306 -d mysql:5.7
+
+
+## Troubleshooting Commands
+
+* bundle config --global build.mysql2 --with-opt-dir="$(brew --prefix openssl)"

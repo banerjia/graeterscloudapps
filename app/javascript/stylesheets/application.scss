@@ -1,0 +1,12 @@
+// SB Admin 2 Configuration
+@import "./sb_admin/scss/sb-admin-2";
+
+// Fontawesome Configuration
+$fa-font-path: '~@fortawesome/fontawesome-free/webfonts'; 
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import '~@fortawesome/fontawesome-free/scss/solid';
+@import '~@fortawesome/fontawesome-free/scss/regular';
+
+.bg-gradient-brand-graeters{
+    background-image: linear-gradient($brand-graeters,#000);
+}
