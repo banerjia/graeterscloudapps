@@ -7,3 +7,15 @@ $fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
 @import '~@fortawesome/fontawesome-free/scss/solid';
 @import '~@fortawesome/fontawesome-free/scss/regular';
 
+
+ 
+.bg-graeters{
+    background-color: $brand-graeters;
+}
+
+.sidebar-brand {
+    .mx-3{
+        color: $blue;
+    }
+    
+}

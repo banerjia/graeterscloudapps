@@ -16,5 +16,6 @@ require("channels")
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 
-import "bootstrap/js/dist/collapse"
+import 'bootstrap'
+import './sb-admin-2'
 import '../stylesheets/application'
