@@ -4,9 +4,9 @@
     list_caption        = "Retailers"   if list_caption.nil?
 -%>
 
-<table>
+<table class="table-light table-condensed">
     <caption><%= list_caption -%></caption>
-    <thead>
+    <thead class="thead-dark">
       <tr>
     <%- if show_status_column -%>
         <th scope="col">Status</th>

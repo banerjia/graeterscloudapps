@@ -54,7 +54,7 @@
   
         <!-- Nav Item - Pages Collapse Menu -->
         <li class="nav-item">
-          <%= link_to 'Retailers', '#', class: 'nav-link' -%>
+          <%= link_to 'Retailers', manage_retailers_path, class: 'nav-link' -%>
         </li>
         <li class="nav-item">
           <%= link_to 'Stores', '#', class: 'nav-link' -%>
@@ -251,7 +251,9 @@
             </div>
   
             <div class="row">
-              <%= yield -%>
+              <div class="col-12">
+                <%= yield -%>
+              </div>
             </div>
   
           </div>

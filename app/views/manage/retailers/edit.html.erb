@@ -1,10 +1,11 @@
-<h1>Editing Retailer</h1>
-
+<%-
+    @page_title = "Edit Retailer"
+-%>
 <%= render 'form', retailer: @retailer %>
 
 <div>
     <%= render 'timestamps', model: @retailer -%>
 </div>
 
-<%= link_to 'Show', manage_retailer_path(@retailer) %> |
-<%= link_to 'Back', manage_retailers_path %>
+<%= link_to 'Show', manage_retailer_path(@retailer), class: 'btn btn-primary' %> |
+<%= link_to 'Back', manage_retailers_path, class: 'btn btn-default' %>

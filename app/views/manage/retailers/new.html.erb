@@ -1,5 +1,7 @@
-<h1>New Retailer</h1>
+<%-
+    @page_title = "New Retailer"
+-%>
 
 <%= render 'form', retailer: @retailer %>
 
-<%= link_to 'Back', manage_retailers_path %>
+<%= link_to 'Back', manage_retailers_path, class: 'btn btn-primary' %>
