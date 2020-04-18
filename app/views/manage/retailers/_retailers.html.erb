@@ -3,31 +3,39 @@
     show_status_column  = false         if (defined?(show_status_column)).nil?
     list_caption        = "Retailers"   if list_caption.nil?
 -%>
-
-<table class="table-light table-condensed">
-    <caption><%= list_caption -%></caption>
-    <thead class="thead-dark">
+<h3 class="h3"><%= list_caption -%></h3>
+<table class="table" style="caption-side: top;">
+    <thead class="thead-light">
       <tr>
-    <%- if show_status_column -%>
-        <th scope="col">Status</th>
-    <%- end -%>
-        <th>Name</th>
-        <th>Retailer URI Code</th>
-        <th colspan="3"></th>
+        <th style="width: 20%">&nbsp;</th>
+        <th style="width: 40%">Name</th>
+        <th style="width: 21%">Retailer URI Code</th>
+        <th scope="col" style="width: 25%" class="d-table-cell-none d-table-cell-md">
+          <%- if show_status_column -%>
+              Status
+          <%- else -%>
+              <!-- Empty column to keep table structure consistency -->
+              &nbsp; 
+          <%- end -%>
+        </th>
       </tr>
     </thead>
   
     <tbody>
       <%- retailers.each do |retailer| -%>
-        <tr>
-        <%- if show_status_column -%>
-            <td><%= Retailer::STATUS.key(retailer.status).to_s.capitalize -%></td>
-        <%- end -%>          
-          <td><%= retailer.name %></td>
+        <tr>      
+          <td> <%= link_to 'Edit', edit_manage_retailer_path(retailer), class: 'btn btn-primary d-inline-block' %> | 
+            <%= button_to 'Remove', manage_retailer_path(retailer), method: :delete, class: 'btn btn-danger d-inline-block' %></td>
+          <td><%= link_to retailer.name, manage_retailer_path(retailer) %></td>
           <td><%= retailer.uri_string %></td>
-          <td><%= link_to 'Show', manage_retailer_path(retailer) %></td>
-          <td><%= link_to 'Edit', edit_manage_retailer_path(retailer) %></td>
-          <td><%= button_to 'Remove', manage_retailer_path(retailer), method: :delete %></td>
+          <td class="d-table-cell-none d-table-cell-md">
+            <%- if show_status_column -%>
+              <%= Retailer::STATUS.key(retailer.status).to_s.capitalize -%>
+            <%- else -%>
+                <!-- Empty column to keep table structure consistency -->
+                &nbsp; 
+            <%- end -%>
+          </td> 
         </tr>
       <%- end -%>
     </tbody>
