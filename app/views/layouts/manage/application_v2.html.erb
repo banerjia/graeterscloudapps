@@ -1,0 +1,36 @@
+<%-
+  @page_title = "Default" if @page_title.nil?
+  @browser_title = @page_title if @browser_title.nil?
+-%>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>GCA > Manage > <%= @browser_title -%></title>
+  <!-- ROR Tags -->
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  
+  <!-- Standard CSS Links -->
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <%= yield -%>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

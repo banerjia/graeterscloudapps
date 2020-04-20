@@ -1,21 +1,7 @@
-// SB Admin 2 Configuration
-@import "./sb_admin/scss/sb-admin-2";
-
+@import 'bootstrap';
 // Fontawesome Configuration
 $fa-font-path: '~@fortawesome/fontawesome-free/webfonts'; 
 @import '~@fortawesome/fontawesome-free/scss/fontawesome';
 @import '~@fortawesome/fontawesome-free/scss/solid';
 @import '~@fortawesome/fontawesome-free/scss/regular';
 
-
- 
-.bg-graeters{
-    background-color: $brand-graeters;
-}
-
-.sidebar-brand {
-    .mx-3{
-        color: $blue;
-    }
-    
-}

@@ -17,5 +17,5 @@ require("channels")
 // const imagePath = (name) => images(name, true)
 
 import 'bootstrap'
-import './sb-admin-2'
 import '../stylesheets/application'
+
