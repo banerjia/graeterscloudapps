@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_02_193109) do
+ActiveRecord::Schema.define(version: 2020_04_24_022220) do
 
   create_table "retailers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.string "name", limit: 64, null: false
@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 2020_04_02_193109) do
     t.string "status", limit: 32, default: "actv", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.json "metadata"
     t.index ["status", "uri_string"], name: "ix_status_uri_string_unq", unique: true
     t.index ["status"], name: "ix_status"
   end

@@ -10,6 +10,6 @@ Rails.application.routes.draw do
   end
   
 
-  root "manage/welcome#index"
+  root "manage/retailers#index"
   
 end
